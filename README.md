@@ -210,6 +210,11 @@ Guix install is set up and what it will initially contain.
     `/etc/config.scm` is just a convenient place to keep your configuration as
     you work with the system.
 
+1. Make the `/boot/efi` directory and mount the EFI parition there
+
+        yourname@guix ~$ sudo mkdir /boot/efi
+        yourname@guix ~$ sudo mount /dev/vda1 /boot/efi
+
 1. Reconfigure the Guix system:
 
         yourname@guix ~$ sudo guix system reconfigure /etc/config.scm
