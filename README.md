@@ -167,11 +167,11 @@ Guix install is set up and what it will initially contain.
     Mine was 422Mb in size.
 
 1. Copy the qcow2 image off the Debian VM, in whatever way you like to do that
-(`scp`, attached disk image that's readable in macos, etc.).
+(`scp`, attached disk image that's readable in macOS, etc.).
 
 1. Shut down the Debian system.
 
-1. Rename the image file on macos to `guix.qcow2`.
+1. Rename the image file on macOS to `guix.qcow2`.
 
 1. Start a new VM with the freshly-installed Guix system:
 
@@ -210,7 +210,7 @@ Guix install is set up and what it will initially contain.
 1. Copy the `config.scm` you created above onto your Guix system
 
     As above: you can do this via `scp`, an attached disk image that's
-    readable in macos, etc.
+    readable in macOS, etc.
 
     You can install `ssh` and `scp` with `guix install openssh`.
 
