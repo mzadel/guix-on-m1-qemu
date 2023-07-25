@@ -28,6 +28,17 @@ installing Guix on M1
 Macs.](https://n8henrie.com/2022/10/guix-system-guixsd-vm-on-an-m1-mac/) It
 really helped with getting my head into the process.  Thanks!
 
+## Takeaways
+
+The Guix ISO installer didn't work for me on aarch64.  Making a VM image or
+doing a manual install did work.
+
+I show a list of steps for getting Guix installed on an aarch64 VM on macOS,
+and include a small starter confguration file.
+
+It can be helpful to pull a specific commit of the distro that includes a
+working, precompiled kernel.
+
 ## Steps to create a Guix aarch64 VM
 
 To create the VM image, we run `guix system image --image-type=qcow2`.  In
