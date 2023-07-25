@@ -229,6 +229,27 @@ Guix install is set up and what it will initially contain.
     documentation](https://guix.gnu.org/en/manual/en/html_node/Getting-Started.html)
     for next steps.
 
+## Pulling a specific commit
+
+Since Guix is a rolling release distro, there are sometimes broken packages and
+long compile times, especially on aarch64.  This isn't really a problem since
+upgrades are atomic, but it can be confusing/frustrating to a newcomer.  In
+general, certain packages might have errors or might not have binary downloads
+(substitutes) available.
+
+I used a `--commit` argument in the `guix pull` commands above to be sure to
+get `linux-libre-6.3.13`.
+
+        yourname@guix ~$ guix pull --commit 00ed2901f5
+
+At the time of writing, the [6.4 version hasn't been built on
+aarch64,](https://ci.guix.gnu.org/search?query=linux-libre-6.4+spec%3Amaster+)
+so if you use the latest Guix version you'll get into a long upgrade situation
+where it rebuilds the kernel.  I solved it by using a slightly older Guix
+([`00ed2901f5`](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=00ed2901f5)).
+I haven't been able to figure out another method to pin the install at a
+particular kernel version in my `operating-system` definition.
+
 ## Manual Installation
 
 The other method that I got to work was a manual installation.  You create a
